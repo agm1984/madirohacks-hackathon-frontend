@@ -12,12 +12,19 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true  },
+      { href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans:wght@400;500;600;700&display=swap', rel: 'stylesheet' }
+    ],
+    script: [
+      { src: 'https://unpkg.com/phosphor-icons' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/scss/main.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,6 +42,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['nuxt-buefy', { css: false }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

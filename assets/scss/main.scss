@@ -1,0 +1,13 @@
+// Import bulma styles
+@import "~bulma";
+
+// Import buefy styles
+@import "~buefy/src/scss/buefy";
+
+.standard-button {
+    @apply px-4 py-2 text-white rounded-md bg-brand-200 text-sm shadow-lg;
+}
+
+.standard-button-inactive {
+    @apply px-4 py-2 text-black rounded-md bg-brand-300 text-sm shadow-lg;
+}
