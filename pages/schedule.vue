@@ -1,13 +1,13 @@
 <template>
-    <div class="pt-16 pb-24 px-4">
+    <div class="px-4 pt-16 pb-24">
         <NavTopLinks />
 
-        <h2 class="text-lg font-bold text-black pt-8 pb-2">
+        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
             Upcoming
         </h2>
 
         <div class="grid grid-cols-2 gap-4">
-            <div v-for="appointment in upcomingAppointments" :key="`appointment-${appointment.id}`" class="flex bg-white shadow-md rounded-2xl p-2">
+            <div v-for="appointment in upcomingAppointments" :key="`appointment-${appointment.id}`" class="flex p-2 bg-white shadow-md rounded-2xl">
                 <i v-if="appointment.type === 'assessment'" class="ph-address-book ph-3x text-brand-200"></i>
                 <i v-if="appointment.type === 'prescription'" class="ph-pill ph-3x text-brand-200"></i>
                 <i v-if="appointment.type === 'vaccination'" class="ph-syringe ph-3x text-brand-200"></i>
@@ -17,14 +17,14 @@
                         {{ appointment.type.replace(/(^\w|\s\w)/g, m => m.toUpperCase()) }}
                     </h3>
 
-                    <div class="text-xs">
+                    <div class="text-xs text-gray-400">
                         {{ appointment.appointment_at }}
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="text-lg font-bold text-black pt-8 pb-2">
+        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
             Calendar
         </h2>
 
