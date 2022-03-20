@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed bottom-0 w-full flex justify-around bg-brand-400 border-t p-4">
+    <div class="fixed bottom-0 z-10 flex justify-around w-full p-4 border-t bg-brand-400">
         <NuxtLink
             :to="{ name: 'logbook' }"
             :class="['flex flex-col items-center', {

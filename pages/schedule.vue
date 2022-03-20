@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
+        <h2 class="pt-4 pb-2 text-lg font-bold text-black">
             Calendar
         </h2>
 
@@ -53,6 +53,10 @@ export default {
                 { id: 2, type: 'prescription', appointment_at: 'March 20th, 2022 07:36AM WAT' },
                 { id: 3, type: 'vaccination', appointment_at: 'March 20th, 2022 07:36AM WAT' },
                 { id: 4, type: 'assessment', appointment_at: 'March 20th, 2022 07:36AM WAT' },
+                { id: 5, type: 'vaccination', appointment_at: 'March 20th, 2022 07:36AM WAT' },
+                { id: 6, type: 'assessment', appointment_at: 'March 20th, 2022 07:36AM WAT' },
+                { id: 7, type: 'assessment', appointment_at: 'March 20th, 2022 07:36AM WAT' },
+                { id: 8, type: 'prescription', appointment_at: 'March 20th, 2022 07:36AM WAT' },
             ],
             selectedDate: null,
         };

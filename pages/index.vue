@@ -1,7 +1,7 @@
 <template>
-    <div class="pt-16 pb-24 px-4">
-        <div class="flex justify-center items-center pt-4">
-            <img src="https://www.tubefilter.com/wp-content/uploads/2018/07/doctor-mike.jpg" class="h-16 w-16 object-cover rounded-full">
+    <div class="px-4 pt-16 pb-24">
+        <div class="flex items-center justify-center pt-4">
+            <img src="https://www.tubefilter.com/wp-content/uploads/2018/07/doctor-mike.jpg" class="object-cover w-16 h-16 rounded-full">
 
             <div class="pl-4">
                 <h1 class="text-xl font-semibold">
@@ -15,48 +15,60 @@
         <NavTopLinks />
 
         <div class="pt-8">
-            <h2 class="text-lg font-bold text-black pb-2">
+            <h2 class="pb-2 text-lg font-bold text-black">
                 Browse
             </h2>
 
             <div class="grid grid-cols-2 gap-x-8 gap-y-4">
                 <div>
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-test-tube ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Tests
                     </div>
                 </div>
 
                 <div>
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-pill ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Medication
                     </div>
                 </div>
 
                 <button @click="openSupplies" class="text-left">
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-first-aid-kit ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Supplies
                     </div>
                 </button>
 
                 <div>
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-books ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Resources
                     </div>
                 </div>
 
                 <div>
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-chart-line-up ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Outbreaks
                     </div>
                 </div>
 
                 <div>
-                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="flex items-center justify-center h-32 text-white shadow-2xl rounded-3xl bg-brand-500">
+                        <i class="ph-heart-straight ph-4x"></i>
+                    </div>
                     <div class="text-base font-medium text-black">
                         Support
                     </div>

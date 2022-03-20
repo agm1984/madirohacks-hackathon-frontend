@@ -10,7 +10,7 @@
                         'bg-pink-100': (patient.gender === 'female'),
                     }]"
                 >
-                    <i :class="`ph-gender-${patient.gender} ph-3x`"></i>
+                    <i :class="`ph-gender-${patient.gender} ph-3x text-white`"></i>
                 </div>
 
                 <div class="w-full pl-4">
@@ -66,34 +66,44 @@
             </button>
         </div>
 
-        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
+        <h2 class="pt-4 pb-2 text-lg font-bold text-black">
             Browse
         </h2>
 
-        <div class="flex">
+        <div class="flex justify-center">
             <div>
-                <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                <div class="flex items-center justify-center w-24 h-24 text-white shadow-2xl rounded-3xl bg-brand-500">
+                    <i class="ph-chart-bar ph-4x"></i>
+                </div>
                 <div class="text-base font-medium text-black">
                     Assessments
                 </div>
             </div>
 
             <div class="ml-4">
-                <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                <div class="flex items-center justify-center w-24 h-24 text-white shadow-2xl rounded-3xl bg-brand-500">
+                    <i class="ph-pill ph-4x"></i>
+                </div>
                 <div class="text-base font-medium text-black">
                     Medication
                 </div>
             </div>
 
             <div class="ml-4">
-                <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                <div class="flex items-center justify-center w-24 h-24 text-white shadow-2xl rounded-3xl bg-brand-500">
+                    <i class="ph-test-tube ph-4x"></i>
+                </div>
                 <div class="text-base font-medium text-black">
                     Tests
                 </div>
             </div>
         </div>
 
-        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
+        <div class="flex justify-end">
+            <i class="text-brand-200 ph-caret-right ph-2x"></i>
+        </div>
+
+        <h2 class="pt-4 pb-2 text-lg font-bold text-black">
             History
         </h2>
 

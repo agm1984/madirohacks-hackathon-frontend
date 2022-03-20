@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-16 pb-24 px-4">
+    <div class="px-4 pt-16 pb-24">
         <NavTopLinks />
 
         <div class="pt-8">
@@ -13,7 +13,7 @@
             <NuxtLink
                 v-for="patient in filteredPatients"
                 :key="`patient-${patient.id}`"
-                class="flex bg-white shadow-md rounded-2xl p-4 mb-4"
+                class="flex p-4 mb-4 bg-white shadow-md rounded-2xl"
                 :to="{
                     name: 'patient',
                     params: {
@@ -27,7 +27,7 @@
                         'bg-pink-100': patient.gender === 'female',
                     }]"
                 >
-                    <i :class="`ph-gender-${patient.gender} ph-3x`"></i>
+                    <i :class="`ph-gender-${patient.gender} ph-3x text-white`"></i>
                 </div>
 
                 <div class="w-full pl-4">
