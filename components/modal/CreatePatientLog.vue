@@ -1,6 +1,6 @@
 <template>
     <div class="bg-white rounded-2xl">
-        <div class="flex items-center justify-between border-b py-2 px-4">
+        <div class="flex items-center justify-between px-4 py-2 border-b">
             <h2 class="text-xl font-bold">
                 Logbook Entry
             </h2>
@@ -10,7 +10,7 @@
             </button>
         </div>
 
-        <div class="flex flex-col py-4 px-4">
+        <div class="flex flex-col px-4 py-4">
             <div class="flex">
                 <div class="w-1/2 font-semibold">Name:</div>
                 <div class="w-1/2 text-right">{{ patient.name }}</div>
@@ -47,7 +47,20 @@
                 ></b-input>
             </div>
 
-            <div>
+            <div class="pt-1">
+                <b-upload
+                    v-model="newNote.photos"
+                    accept="image/*"
+                    multiple
+                >
+                    <div class="flex items-center">
+                        <i class="text-green-500 ph-plus-circle ph-2x"></i>
+                        <span class="ml-2">Upload photos</span>
+                    </div>
+                </b-upload>
+            </div>
+
+            <div class="pt-4">
                 <button class="w-full standard-button" @click="handleSave">
                     Save
                 </button>
@@ -71,6 +84,7 @@ export default {
             newNote: {
                 type: 'assessment',
                 note: '',
+                photos: [],
             },
         };
     },
