@@ -1,7 +1,7 @@
 <template>
     <div class="px-4 pt-16 pb-24">
         <div class="flex items-center justify-center pt-4">
-            <img src="https://www.tubefilter.com/wp-content/uploads/2018/07/doctor-mike.jpg" class="object-cover w-16 h-16 rounded-full">
+            <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=853&q=80" class="object-cover w-16 h-16 rounded-full">
 
             <div class="pl-4">
                 <h1 class="text-xl font-semibold">
