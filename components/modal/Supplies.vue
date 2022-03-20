@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white pb-8 mx-4 rounded-2xl">
-        <div class="flex items-center justify-between border-b py-2 pl-8 pr-4">
+    <div class="bg-white pb-8 rounded-2xl">
+        <div class="flex items-center justify-between border-b py-2 px-4">
             <h2 class="text-xl font-bold">
                 Supplies
             </h2>
@@ -10,7 +10,7 @@
             </button>
         </div>
 
-        <div class="py-4 px-8">
+        <div class="py-4 px-4">
             <div class="rounded-full w-full h-2 bg-gray-300">
                 <div class="rounded-full h-2 bg-brand-200" :style="`width: ${supplyTotals.percent}%`"></div>
             </div>
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="px-8">
+        <div class="px-4">
             <div v-for="item in supplies" :key="`supply-${item.id}`" class="flex justify-between">
                 <div>
                     {{ item.name }}

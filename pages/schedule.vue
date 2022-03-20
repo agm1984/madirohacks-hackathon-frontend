@@ -3,8 +3,9 @@
         <NavTopLinks />
 
         <div class="pt-8">
-            <!-- <v-calendar title-position="left" is-expanded /> -->
-            <v-date-picker v-model="selectedDate" title-position="left" is-expanded />
+            <client-only>
+                <v-date-picker v-model="selectedDate" title-position="left" is-expanded />
+            </client-only>
         </div>
 
         {{ selectedDate }}
