@@ -10,7 +10,17 @@
         </div>
 
         <div class="flex flex-col pt-4">
-            <div v-for="patient in filteredPatients" :key="`patient-${patient.id}`" class="flex bg-white shadow-md rounded-2xl p-4 mb-4">
+            <NuxtLink
+                v-for="patient in filteredPatients"
+                :key="`patient-${patient.id}`"
+                class="flex bg-white shadow-md rounded-2xl p-4 mb-4"
+                :to="{
+                    name: 'patient',
+                    params: {
+                        patientId: patient.id,
+                    },
+                }"
+            >
                 <div
                     :class="['flex items-center justify-center p-4 rounded-lg', {
                         'bg-blue-100': patient.gender === 'male',
@@ -22,24 +32,25 @@
 
                 <div class="w-full pl-4">
                     <div class="flex justify-between">
-                        <h3 class="text-lg font-bold">
+                        <h3 class="text-lg font-bold text-black">
                             {{ patient.name }}
                         </h3>
 
-                        <button @click="() => handleBookmark(patient.id)">
+                        <button @click.prevent="() => handleBookmark(patient.id)">
                             <i
                                 :class="['ph-bookmark ph-2x', {
                                     'text-brand-200': patient.is_bookmarked,
+                                    'text-gray-400': !patient.is_bookmarked,
                                 }]"
                             ></i>
                         </button>
                     </div>
 
-                    <div class="text-sm">
+                    <div class="text-sm text-gray-400">
                         Visited at: {{ patient.visited_at }}
                     </div>
                 </div>
-            </div>
+            </NuxtLink>
         </div>
     </div>
 </template>

@@ -15,19 +15,58 @@
         <NavTopLinks />
 
         <div class="pt-8">
-            <h2 class="text-lg font-bold">
+            <h2 class="text-lg font-bold text-black pb-2">
                 Browse
             </h2>
 
-            <div class="grid grid-cols-2 gap-x-8 gap-y-4 pt-4">
-                <div v-for="cat in categories" :key="`category-${cat.id}`">
-                    <img :src="cat.image" class="object-cover rounded-2xl">
+            <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                <div>
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
                     <div class="text-base font-medium text-black">
-                        {{ cat.name }}
+                        Tests
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="text-base font-medium text-black">
+                        Medication
+                    </div>
+                </div>
+
+                <button @click="openSupplies" class="text-left">
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="text-base font-medium text-black">
+                        Supplies
+                    </div>
+                </button>
+
+                <div>
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="text-base font-medium text-black">
+                        Resources
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="text-base font-medium text-black">
+                        Outbreaks
+                    </div>
+                </div>
+
+                <div>
+                    <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
+                    <div class="text-base font-medium text-black">
+                        Support
                     </div>
                 </div>
             </div>
         </div>
+
+        <b-modal v-model="isViewingSupplies" :can-cancel="false">
+            <ModalSupplies @close="closeSupplies" />
+        </b-modal>
     </div>
 </template>
 
@@ -37,20 +76,21 @@ export default {
 
     data() {
         return {
-            categories: [
-                { id: 1, name: 'Tests', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-                { id: 2, name: 'Medication', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-                { id: 3, name: 'Supplies', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-                { id: 4, name: 'Resources', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-                { id: 5, name: 'Outbreaks', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-                { id: 6, name: 'Support', image: 'https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg', url: '' },
-            ],
+            isViewingSupplies: false,
         };
     },
 
     computed: {},
 
-    methods: {},
+    methods: {
+        openSupplies() {
+            this.isViewingSupplies = true;
+        },
+
+        closeSupplies() {
+            this.isViewingSupplies = false;
+        },
+    },
 
 };
 </script>

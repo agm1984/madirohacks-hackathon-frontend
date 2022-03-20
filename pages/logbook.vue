@@ -2,7 +2,7 @@
     <div class="pt-16 pb-24 px-4">
         <NavTopLinks />
 
-        <div class="flex justify-between pt-4">
+        <div class="flex justify-between pt-8">
             <div class="flex items-center">
                 <div class="h-4 w-4 bg-green-500 rounded-full"></div>
                 <span class="ml-2">Low risk</span>
