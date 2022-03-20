@@ -1,6 +1,8 @@
 <template>
-    <div class="pt-16 pb-24 px-4">
-        <div class="bg-white shadow-md rounded-2xl flex flex-col p-4 mt-4">
+    <div class="px-4 pt-16 pb-24">
+        <NavTopLinks />
+
+        <div class="flex flex-col p-4 mt-8 bg-white shadow-md rounded-2xl">
             <div class="flex">
                 <div
                     :class="['flex items-center justify-center p-4 rounded-lg', {
@@ -64,11 +66,11 @@
             </button>
         </div>
 
-        <h2 class="text-lg font-bold text-black pt-8 pb-2">
+        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
             Browse
         </h2>
 
-        <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+        <div class="flex">
             <div>
                 <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
                 <div class="text-base font-medium text-black">
@@ -76,14 +78,14 @@
                 </div>
             </div>
 
-            <div class="">
+            <div class="ml-4">
                 <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
                 <div class="text-base font-medium text-black">
                     Medication
                 </div>
             </div>
 
-            <div class="">
+            <div class="ml-4">
                 <img src="https://www.thedesignwork.com/wp-content/uploads/2011/10/Random-Pictures-of-Conceptual-and-Creative-Ideas-02.jpg" class="object-cover rounded-2xl">
                 <div class="text-base font-medium text-black">
                     Tests
@@ -91,18 +93,18 @@
             </div>
         </div>
 
-        <h2 class="text-lg font-bold text-black pt-8 pb-2">
+        <h2 class="pt-8 pb-2 text-lg font-bold text-black">
             History
         </h2>
 
         <div class="">
-            <div v-for="log in patient.history" :key="`history-${log.id}`" class="flex items-center justify-between bg-white shadow-md rounded-2xl p-4 mb-4">
+            <div v-for="log in patient.history" :key="`history-${log.id}`" class="flex items-center justify-between p-4 mb-4 bg-white shadow-md rounded-2xl">
                 <div class="flex flex-col">
                     <h3 class="text-lg font-bold">
                         {{ log.type.replace(/(^\w|\s\w)/g, m => m.toUpperCase()) }}
                     </h3>
 
-                    <div class="text-gray-400 text-sm">
+                    <div class="text-sm text-gray-400">
                         {{ log.logged_at }}
                     </div>
                 </div>
