@@ -177,7 +177,7 @@ export default {
                 id: this.patient.history.length + 1,
                 ...newNote,
                 logged_at: 'March 20th, 2022 03:36PM WAT',
-            })
+            });
         },
     },
 
